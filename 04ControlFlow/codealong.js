@@ -1,106 +1,130 @@
-// ===========================================
-// 🚀 Introduction to Control Flow
-// ===========================================
-// Control flow determines the order in which statements in a program are executed.
-// JavaScript executes code line-by-line from top to bottom unless control structures 
-// (like conditionals or loops) alter that flow.
+// homework!!!
 
-// -------------------------------------------
-// ✅ *if* Statement
-// -------------------------------------------
-// Executes a block of code only if a specified condition is true.
-let midiNote = 64;
-if (midiNote >= 0 && midiNote <= 127) {
-  console.log("Valid MIDI note:", midiNote);
+// Control Flow
+// - Determines the order in which statements in a program are executed
+// - JavaScript executes code line-by-line from top to bottom unless control structures (like conditionals or loops) alter that flow.
+
+// MIDI protocol 101:
+// 0-127 with 0 as lowest value and 127 as highest
+
+let favMIDI = prompt("What's your favorite MIDI integer?")
+
+// *if* 
+// - Executes a block of code only if a specified condition is true.
+let midi = 64;
+if (midi >= 0 && midi <= 127) {
+  console.log("VALID", midi);
 }
 
-// -------------------------------------------
-// ✅ *if-else* Statement
-// -------------------------------------------
-let anotherNote = 150;
-if (anotherNote >= 0 && anotherNote <= 127) {
-  console.log("Valid MIDI note.");
+
+// *if-else* 
+let otherMIDI = 150;
+if (otherMIDI >= 0 && otherMIDI <= 127) {
+  console.log("VALID");
 } else {
-  console.log("Invalid MIDI note.");
+  console.log("INVALID");
 }
 
-// -------------------------------------------
-// ✅ *else-if* for Multiple Conditions
-// -------------------------------------------
-let thirdNote = 64;
-if (thirdNote < 64) {
-  console.log("MIDI note is smaller than 64.");
-} else if (thirdNote > 64) {
-  console.log("MIDI note is greater than 64.");
+
+// *else-if* for Multiple Conditions
+let manyMIDI = 64;
+if (manyMIDI < 64) {
+  console.log("MIDI is smaller than 64.");
+} else if (manyMIDI > 64) {
+  console.log("MIDI is greater than 64.");
 } else {
-  console.log("MIDI note is exactly 64.");
+  console.log("MIDI is exactly 64.");
 }
 
-// ===========================================
-// 🔁 Loops in JavaScript
-// ===========================================
-// Loops allow us to repeat code multiple times.
+// *else-if* for More Multiple Conditions
+let mmMIDI = 64;
+if (mmMIDI == 12) {
+  console.log("MIDI is 12.");
+} else if (mmMIDI == 13) {
+  console.log("MIDI is 13.");
+} else if (mmMIDI > 64) {
+  console.log("MIDI is greater than 64.");
+} else {
+  console.log("MIDI is less than 64 but not 12 or 13.");
+}
 
-// ✅ *while* Loop
+// Loops 
+// - allow us to repeat code multiple times
+
+// *while* Loop
 let count = 0;
 while (count < 3) {
-  console.log("Happy Thursday");
-  count++;
+  console.log("Happy");
+  count++; // shorthand for add one integer!!!
 }
 
-// ✅ *while-else* Loop
-let counter = 0;
-while (counter < 3) {
-  counter++;
-  console.log("Happy Thursday");
-}
-if (counter >= 3) {
-  console.log("Happy Friday");
+// *for* Loop 
+for (let i = 0; i < 128; i++) { //standard structure for 'for' accumulators -- initializes; checks; updates
+	console.log(`MIDI value is ${i}`); //template literal!
 }
 
-// ✅ *for* Loop
-for (let i = 0; i < 128; i++) {
-  console.log(`The next MIDI note value is ${i}`);
-}
-
-// ✅ Incrementing by 2
+// incrementing by 2
 for (let i = 0; i < 128; i += 2) {
-  console.log(`The next MIDI note value is ${i}`);
+  console.log(`MIDI value is ${i}`);
 }
 
-// ✅ Finding numbers divisible by 7 and 5 between 1500 and 2700
+// decrementing by 3
+for (let i = 128; i >= 0; i -= 3) { 
+	console.log(`MIDI value is ${i}`); 
+}
+
+// finding numbers divisible by 7 and 5 between 1500 and 2700 (homework is based on this...)
 for (let i = 1500; i <= 2700; i++) {
   if (i % 7 === 0 && i % 5 === 0) {
     console.log(i);
   }
 }
 
-// ✅ Nested for-loop
+// pyramid
+for (let row = "#"; row.length < 8; row += "#") // .js method length
+  console.log(row);
+
+// Nested for-loops
+//chessboard
+let size = 8;
+let board = "";
+
+for (let y = 0; y < size; y++) {
+  for (let x = 0; x < size; x++) {
+    if ((x + y) % 2 == 0) {
+      board += " ";
+    } else {
+      board += "#"; // addition assignment operator: adds the value on right to binding on left; rebinds what is on the left to the result of the calculation
+    }
+  }
+  board += "\n";
+}
+console.log(board);
+
+//columns vs rows
 for (let i = 0; i < 10; i++) {
-  let row = '';
+	let row = "\n"; 
   for (let j = 0; j < 10; j++) {
     if (j >= i) {
-      row += j.toString();
+		row += j.toString(); 
     }
   }
   console.log(row);
 }
 
-// ===========================================
-// 📚 Recursion
-// ===========================================
-// Solve a computational problem with solutions to smaller instances of the same problem. 
-// Use functions that call themselves. 
+// Recursion
+// - solve a problem with itself!
+// - a computational problem with solutions to smaller instances of the same problem
+// Factorial, Fibinocci, Romanesco
 
-// ✅ Infinite recursion
+// Infinite recursion
 function func() {
   console.log("Lovely!");
   func();
 }
-// Uncomment to test (it will crash your browser)
-// func();
+func();
 
-// ✅ Recursion with a stop condition
+// Recursion with a stop condition
 function recursiveFunc(count) {
   if (count < 0) {
     return;
