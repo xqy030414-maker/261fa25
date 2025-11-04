@@ -1,28 +1,28 @@
 # Title
+My Cat’s Introduction Website
 
 ## 1 Sentence Overview
+A simple and interactive website that introduces my cat, shows cute pictures, and tells stories about her personality.
 
-
-## 3 SPECIFIC resources you know you will use in developing your project! With Hyperlinks! Not "Rachel's Class Repository!" Not ChatGPT! Not "YouTube"!
-
+## 3 Specific Resources
+- [MDN Web Docs - HTML Images](https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)  
+- [W3Schools - CSS Layout](https://www.w3schools.com/css/css_website_layout.asp)  
+- [p5.js Reference - DOM](https://p5js.org/reference/#/libraries/p5.dom)
 
 ## 1 Paragraph Overview
+This project is for my Intro to Programming class with Professor Rachel. It will not overlap with any other classes. I plan to build a small website that introduces my cat, including her name, photos, favorite toys, and habits. The website will have multiple pages and use basic HTML, CSS, and JavaScript for interactivity. My goal is to make the website both visually cute and easy to navigate, like a digital scrapbook for my cat.
 
+## Good / Better / Best Outcomes
+- **GOOD:** Create a basic website with HTML structure and cat photos displayed properly.  
+- **BETTER:** Add CSS styling and navigation buttons between different pages.  
+- **BEST:** Include animations, interactive buttons, and p5.js effects that respond when users click or hover over cat photos.
 
-## Will any work as part of this project overlap with any work you are doing outside of this class? For another class? Who is the professor in this class?
-
-
-## In the world of software, most everything takes longer to implement than you expect. And so it's not uncommon to accomplish less in a fixed amount of time than you hope.
-
-### In a sentence (or list of features), define a GOOD outcome for your final project. I.e., what WILL you accomplish no matter what?
-
-
-### In a sentence (or list of features), define a BETTER outcome for your final project. I.e., what do you THINK you can accomplish before the final project's deadline?
-
-
-### In a sentence (or list of features), define a BEST outcome for your final project. I.e., what do you HOPE to accomplish before the final project's deadline?
-
-
-## Outline of steps WITH A SPECIFIC CALENDAR INCLUDING DATES
-
+## Outline of Steps WITH A SPECIFIC CALENDAR INCLUDING DATES
+ Nov 5  Create HTML skeleton and add basic text content 
+ Nov 8  Insert cat photos and organize sections 
+ Nov 12  Add CSS styling for layout and colors |
+ Nov 15  Implement JavaScript interactivity (buttons, hover effects) 
+ Nov 20  Test and fix layout or image issues 
+ Nov 25  Add animations and polish design 
+ Nov 28  Final review and submit project 
 
